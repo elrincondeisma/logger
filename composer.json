@@ -1,6 +1,6 @@
 {
     "name": "icatala/logger",
-    "description": "Logger - A simple package for logging in Laravel.",
+    "description": "Logger - A simple package for logging messages in Laravel.",
     "keywords": [
         "icatala",
         "logger"
