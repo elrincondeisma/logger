@@ -42,7 +42,14 @@ class LoggerServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
 
-            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+            // $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+            if (! class_exists('CreateLogsTable')) {
+                $this->publishes([
+                  __DIR__ . '/../database/migrations/create_logs_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_logs_table.php'),
+                  // you can add any number of migrations here
+                ], 'migrations');
+              }
         }
     }
 
