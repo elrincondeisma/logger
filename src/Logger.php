@@ -6,7 +6,7 @@ use Icatala\Logger\Models\Log;
 class Logger
 {
     // Build your next great package.
-    public function create($model,$msg){
+    public static function create($model,$msg){
         try {
             //code...
             $log = new Log;
