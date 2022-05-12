@@ -41,6 +41,8 @@ class LoggerServiceProvider extends ServiceProvider
 
             // Registering package commands.
             // $this->commands([]);
+
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         }
     }
 
